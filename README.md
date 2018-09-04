@@ -48,6 +48,7 @@ double-click on the file skype_send_message.py or use ide.
 
 ## Testing
 
+### Test 1:
 ```
 Welcome to 'Skype send message'. 
 Type your username of Skype: your_username
@@ -57,5 +58,29 @@ password xxxxxxxx
 Type user name of Skype for 1-to-1 conversation: nexus12142
 Sending: 
 Type your message for user of Skype with you want to 1-to-1 conversation: Test
+Your message is send
+
+```
+
+### Test 2:
+```
+Welcome to 'Skype send message'.
+Type your username of Skype: nexus12142
+Type your password of Skype: xxxxxxxx
+password stored successfully
+password xxxxxxxxxxx
+Type user name of Skype for 1-to-1 conversation: nexus12141
+Sending:
+Type your message for user of Skype with you want to 1-to-1 conversation: test
+Your message is send
+```
+
+### Test 3:
+```
+Welcome to 'Skype send message'.
+Type your username of Skype: nexus1214@ukr.net
+Type user name of Skype for 1-to-1 conversation: nexus12142
+Sending:
+Type your message for user of Skype with you want to 1-to-1 conversation: test
 Your message is send
 ```
