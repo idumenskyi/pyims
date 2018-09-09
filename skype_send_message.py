@@ -3,18 +3,20 @@ import argparse
 from skpy import Skype
 parser = argparse.ArgumentParser()
 parent_parser = argparse.ArgumentParser(add_help=False)
-parent_parser.add_argument('--servicename', action="store")
 parent_parser.add_argument('--username', action="store")
 parent_parser.add_argument('--password', action="store")
 print("Welcome to 'Skype send message'. ")
 username = input("Type your username of Skype: ")
-password = input("Type your password of Skype: ")
-try:
-    keyring.set_password("Skype", username,  password)
-    print("password stored successfully")
-except keyring.errors.PasswordSetError:
-    print("failed to store password")
-print("password", keyring.get_password("Skype", username))
+password = keyring.get_password("Skype", username)
+keyring.set_password("Skype", username,  password)
+if (password != keyring.get_password("Skype", username)):
+    password = input("Type your password of Skype: ")
+    try:
+        keyring.set_password("Skype", username,  password)
+        print("password stored successfully")
+    except keyring.errors.PasswordSetError:
+        print("failed to store password")
+    print("password", keyring.get_password("Skype", username))
 contact = Skype(username, password)
 contact.user  # you
 contact.contacts  # your contacts
