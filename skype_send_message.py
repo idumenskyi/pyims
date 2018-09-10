@@ -8,7 +8,6 @@ parent_parser.add_argument('--password', action="store")
 print("Welcome to 'Skype send message'. ")
 username = input("Type your username of Skype: ")
 password = keyring.get_password("Skype", username)
-keyring.set_password("Skype", username,  password)
 if (password != keyring.get_password("Skype", username)):
     password = input("Type your password of Skype: ")
     try:
