@@ -22,7 +22,7 @@ class skype_send_message_test(unittest.TestCase):
         """Set up for test"""
         print("Set up for [" + self.shortDescription() + "]")
         print("password is set ", keyring.set_password("Skype", "nexus12141", "xxxxxxxx"))
-        print("password: ", keyring.get_password("Skype", "nexus12141"))
+        
         
     def tearDown(self):
         """Tear down for test"""
@@ -30,10 +30,10 @@ class skype_send_message_test(unittest.TestCase):
         print("")
         print("password deleted: ", keyring.delete_password("Skype", "nexus12141"))
 
-    def test_password_from_keyring(self):
-        """PASSWORD is SET, TEST"""
+    def test_send_message_conversation(self):
+        """SEND MESSAGE is SET, TEST"""
         print("id: " + self.id())
-        self.assertEqual(skype_send_message.main("", "nexus12141", "xxxxxxxx", "nexus12142", "Hello, Test"), "Hello, Test")
+        self.assertEqual(skype_send_message.main("nexus12141", "nexus12142", "Hello, Test"), "Hello, Test")
 
 
 if __name__ == '__main__':
