@@ -8,8 +8,10 @@ parent_parser.add_argument('--password', action="store")
 parent_parser.add_argument('--servicename', action="store")
 parent_parser.add_argument('--user_conversation', action="store")
 parent_parser.add_argument('--message_conversation', action="store")
-def main(servicename, username,  password, user_conversation, message_conversation):
+def main(username, user_conversation, message_conversation):
     print("Welcome to 'Skype send message'. ")
+    servicename = ""
+    password = keyring.get_password(servicename, username)
     try:
         keyring.set_password(servicename, username,  password)
         print("password stored successfully")
@@ -25,7 +27,6 @@ def main(servicename, username,  password, user_conversation, message_conversati
     message.sendMsg(message_conversation)
     message.getMsgs()
     print("Your message is send")
-    print(servicename, username, password)
     return str(message_conversation)
     pass
 if __name__ == '__main__':
