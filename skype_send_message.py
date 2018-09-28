@@ -6,7 +6,7 @@ parent_parser = argparse.ArgumentParser(add_help=False)
 parent_parser.add_argument('--platform', action="store") # argument that save IM Platfform
 parent_parser.add_argument('--to_user', action="store")
 parent_parser.add_argument('--message_text', action="store")
-def main(username, to_user, message_text):
+def main(platform, username, to_user, message_text):
     print("Welcome to 'Skype send message'. ")
     platform = ""
     password = keyring.get_password(platform, username)
