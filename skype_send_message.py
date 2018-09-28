@@ -8,7 +8,6 @@ parent_parser.add_argument('--to_user', action="store")
 parent_parser.add_argument('--message_text', action="store")
 def main(platform, username, to_user, message_text):
     print("Welcome to 'Skype send message'. ")
-    platform = ""
     password = keyring.get_password(platform, username)
     try:
         keyring.set_password(platform, username,  password)
