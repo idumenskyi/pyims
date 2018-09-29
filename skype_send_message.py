@@ -6,15 +6,8 @@ parent_parser = argparse.ArgumentParser(add_help=False)
 parent_parser.add_argument('--platform', action="store") # argument that save IM Platfform
 parent_parser.add_argument('--to_user', action="store")
 parent_parser.add_argument('--message_text', action="store")
-def main(platform, username, to_user, message_text):
+def main(platform, username, password, to_user, message_text):
     print("Welcome to 'Skype send message'. ")
-    password = keyring.get_password(platform, username)
-    try:
-        keyring.set_password(platform, username,  password)
-        print("password stored successfully")
-    except keyring.errors.PasswordSetError:
-        print("failed to store password")
-        print("password", keyring.get_password(platform, username))
     contact = Skype(username, password)
     contact.user  # you
     contact.contacts  # your contacts
@@ -24,7 +17,6 @@ def main(platform, username, to_user, message_text):
     message.sendMsg(message_text)
     message.getMsgs()
     print("Your message is send")
-    return str(message_text)
-    
+    return str(message_text)  
 if __name__ == '__main__':
     main('to_user', 'message_text')
