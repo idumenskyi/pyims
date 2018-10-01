@@ -1,7 +1,7 @@
 import unittest
 import skype_send_message
 import keyring
-
+SKYPE_KEYRING='ims_skype_keyring'
 
 class SkypeSendTextMessageTest(unittest.TestCase):
     """skype_send_message tests"""
@@ -21,7 +21,7 @@ class SkypeSendTextMessageTest(unittest.TestCase):
     def setUp(self):
         """Set up for test"""
         print("Set up for [" + self.shortDescription() + "]")
-        print("password is set ", keyring.set_password("Skype", "nexus12141", "xxxxxxxx"))
+        print("password is set ", keyring.set_password(SKYPE_KEYRING, "nexus12141", "xxxxxxxx"))
         
         
     def tearDown(self):
