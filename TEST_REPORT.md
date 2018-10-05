@@ -1,28 +1,43 @@
 ```
-Testing started at 21:49 ...
+Testing started at 1:45 ...
 /home/idumenskyi/work/pycharm/test_pyims_with_main/venv/bin/python /home/idumenskyi/apps/pycharm-2018.1.3/helpers/pycharm/_jb_unittest_runner.py --path /home/idumenskyi/work/pycharm/test_pyims_with_main/test_skype_send_message.py
 Launching unittests with arguments python -m unittest /home/idumenskyi/work/pycharm/test_pyims_with_main/test_skype_send_message.py in /home/idumenskyi/work/pycharm/test_pyims_with_main
 setUpClass
-==========Set up for [PASSWORD is SET, TEST]
-password is set None
-id: test_skype_send_message.skype_send_message_test.test_password_from_keyring
+==========Set up for [MESSAGES]
+password is set  None
+id: test_skype_send_message.SkypeSendTextMessageTest.test_messages_text_message
+Tear down for [MESSAGES]
+
+password deleted:  None
+
+Error
+Traceback (most recent call last):
+  File "/usr/lib/python3.6/unittest/case.py", line 59, in testPartExecutor
+    yield
+  File "/usr/lib/python3.6/unittest/case.py", line 605, in run
+    testMethod()
+  File "/home/idumenskyi/work/pycharm/test_pyims_with_main/test_skype_send_message.py", line 44, in test_messages_text_message
+    self.assertEqual(skype_send_message.messages("nexus12141", "nexus12142"), "HELLO, TEST11")
+  File "/home/idumenskyi/work/pycharm/test_pyims_with_main/skype_send_message.py", line 39, in messages
+    return str(message_text)
+NameError: name 'message_text' is not defined
+
+Set up for [SEND MESSAGE is SET, TEST]
+password is set  None
+id: test_skype_send_message.SkypeSendTextMessageTest.test_send_text_message
 Welcome to 'Skype send message'. 
-password stored successfully
-Type user name of Skype for 1-to-1 conversation: nexus12142
 Sending: 
-Type your message for user of Skype with you want to 1-to-1 conversation: TEST, hello
 Your message is send
-Skype nexus12141 xxxxxxx
-Tear down for [PASSWORD is SET, TEST]
+Tear down for [SEND MESSAGE is SET, TEST]
 
 password deleted:  None
 ==========
 tearDownClass
 
-Ran 1 test in 49.016s
+Ran 2 tests in 5.620s
 
-OK
+FAILED (errors=1)
 
-Process finished with exit code 0
+Process finished with exit code 1
 
 ```
