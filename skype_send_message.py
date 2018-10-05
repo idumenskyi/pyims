@@ -19,6 +19,10 @@ def main(username, to_user, message_text):
     message.sendMsg(message_text)
     message.getMsgs()
     print("Your message is send")
-    return str(message_text)  
+    return str(message_text)
+
+def messages(username, from_username):
+    return str(message_text)
+
 if __name__ == '__main__':
     main('to_user', 'message_text')
