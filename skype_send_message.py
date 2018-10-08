@@ -21,8 +21,8 @@ def main(username, to_user, message_text):
     print("Your message is send")
     return str(message_text)
 
-def messages(username, from_username):
-    def messages(username, to_user, message_text):
+
+def messages(username, to_user, message_text):
     from_username = main(username, to_user, message_text)
     print(from_username)
     return str(from_username)
