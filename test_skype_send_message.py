@@ -39,7 +39,7 @@ class SkypeSendTextMessageTest(unittest.TestCase):
     def test_messages_text_message(self):
         """MESSAGES"""
         print("id: " + self.id())
-        self.assertEqual(skype_send_message.messages("nexus12142", "nexus12141", "HELLO, TEST11"), "HELLO, TEST11")
+        self.assertEqual(skype_send_message.messages("nexus12142", "nexus12141", "HELLO, TEST"), "HELLO, TEST")
 
 if __name__ == '__main__':
     unittest.main()
