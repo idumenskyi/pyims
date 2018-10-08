@@ -22,7 +22,10 @@ def main(username, to_user, message_text):
     return str(message_text)
 
 def messages(username, from_username):
-    return str(message_text)
+    def messages(username, to_user, message_text):
+    from_username = main(username, to_user, message_text)
+    print(from_username)
+    return str(from_username)
 
 if __name__ == '__main__':
-    main('to_user', 'message_text')
+    main('username', 'to_user', 'message_text')
