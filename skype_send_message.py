@@ -22,10 +22,16 @@ def main(username, to_user, message_text):
     return str(message_text)
 
 
-def messages(username, to_user, message_text):
-    from_username = main(username, to_user, message_text)
-    print(from_username)
-    return str(from_username)
+def messages(username, from_username, message_text):
+    password = keyring.get_password(SKYPE_KEYRING, username)
+    contact = Skype(username, password)
+    contact.user  # you
+    contact.contacts  # your contacts
+    contact.chats  # your conversations
+    message = contact.contacts[username].chat
+    print(message_text)
+    return str(message_text)
+
 
 if __name__ == '__main__':
     main('username', 'to_user', 'message_text')
