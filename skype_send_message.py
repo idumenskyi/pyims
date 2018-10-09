@@ -22,7 +22,7 @@ def main(username, to_user, message_text):
     return str(message_text)
 
 
-def messages(username, from_username, message_text):
+def messages(username, from_username):
     password = keyring.get_password(SKYPE_KEYRING, username)
     contact = Skype(username, password)
     contact.user  # you
