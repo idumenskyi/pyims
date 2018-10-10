@@ -200,3 +200,14 @@ str – Recreated content string based on the field values.
 deleted
 bool – Whether the message content was deleted by the sender.
 ```
+```
+Element of list
+[SkypeTextMsg]
+Id: 1539162761738
+Type: Text
+Time: 2018-10-10 09:12:41.738000
+ClientId: 1539162760502
+UserId: nexus12142 #you
+ChatId: 8:nexus12141 #user wich you send message
+Content: HELLO, TEST12 #your message
+```
