@@ -50,4 +50,5 @@ double-click on the file skype_send_message.py or use ide.
 ### API reference for SkPY
 
 API reference - https://skpy.t.allofti.me/api.html
+
 Bacic Usage - https://skpy.t.allofti.me/usage.html
