@@ -44,8 +44,8 @@ pip3 install keyring
 
 ## Running 
 
-double-click on the file skype_send_message.py or use ide.
-
+double-click on the file test_skype_send_message.py or use ide for run skype.
+double-click on the file test_telegram_send_message.py or use ide for run telegram.
 
 ### API reference for SkPY
 
