@@ -2,7 +2,6 @@ import keyring
 import argparse
 from skpy import Skype
 SKYPE_KEYRING = 'ims_skype_keyring'
-global message_text
 parser = argparse.ArgumentParser()
 parent_parser = argparse.ArgumentParser(add_help=False)
 parent_parser.add_argument('--SKYPE_KEYRING', action="store")  # argument that save IM Platfform
