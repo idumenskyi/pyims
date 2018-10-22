@@ -1,6 +1,6 @@
 # Skype Send Message
 
-Python CLI for sending message of Skype. 
+Python CLI for sending message of messenger. 
 
 ### Prerequisites
 
@@ -52,3 +52,7 @@ double-click on the file skype_send_message.py or use ide.
 API reference - https://skpy.t.allofti.me/api.html
 
 Bacic Usage - https://skpy.t.allofti.me/usage.html
+
+### API reference for Telegram 
+
+https://core.telegram.org/bots/api
