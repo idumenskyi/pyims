@@ -1,4 +1,4 @@
-# Skype Send Message
+# PYIMS
 
 Python CLI for sending message of messenger. 
 
