@@ -10,3 +10,4 @@ def main(chat_id, text):
 
 if '__name__' == '__main__':
     main('chat_id', 'text')
+    
