@@ -1,27 +1,40 @@
 import keyring
 import argparse
 from skpy import Skype
+SKYPE_KEYRING = 'ims_skype_keyring'
+global message_text
 parser = argparse.ArgumentParser()
 parent_parser = argparse.ArgumentParser(add_help=False)
-parent_parser.add_argument('--username', action="store")
-parent_parser.add_argument('--password', action="store")
-print("Welcome to 'Skype send message'. ")
-username = input("Type your username of Skype: ")
-password = keyring.get_password("Skype", username)
-if (password != keyring.get_password("Skype", username)):
-    password = input("Type your password of Skype: ")
-    try:
-        keyring.set_password("Skype", username,  password)
-        print("password stored successfully")
-    except keyring.errors.PasswordSetError:
-        print("failed to store password")
-    print("password", keyring.get_password("Skype", username))
-contact = Skype(username, password)
-contact.user  # you
-contact.contacts  # your contacts
-contact.chats  # your conversations
-message = contact.contacts[input("Type user name of Skype for 1-to-1 conversation: ")].chat  # 1-to-1 conversation
-print("Sending: ")
-message.sendMsg(input("Type your message for user of Skype with you want to 1-to-1 conversation: "))
-message.getMsgs()  # retrieve recent messages
-print("Your message is send")
+parent_parser.add_argument('--SKYPE_KEYRING', action="store")  # argument that save IM Platfform
+parent_parser.add_argument('--to_user', action="store")
+parent_parser.add_argument('--message_text', action="store")
+def main(username, to_user, message_text):
+    print("Welcome to 'Skype send message'. ")
+    password = keyring.get_password(SKYPE_KEYRING, username)
+    contact = Skype(username, password)
+    contact.user  # you
+    contact.contacts  # your contacts
+    contact.chats  # your conversations
+    message = contact.contacts[to_user].chat  # 1-to-1 conversation
+    print("Sending: ")
+    message.sendMsg(message_text)
+    message.getMsgs()
+    mess = message.getMsgs()
+    rms = mess[0].content
+    print(rms)
+    return str(rms)
+
+def messages(username, from_username):
+    password = keyring.get_password(SKYPE_KEYRING, username)
+    contact = Skype(username, password)
+    contact.user  # you
+    contact.contacts  # your contacts
+    contact.chats  # your conversations
+    message = contact.contacts[from_username].chat  # 1-to-1 conversation
+    message.getMsgs()
+    mess = message.getMsgs()
+    rms = mess[0].content
+    return str(rms)
+
+if __name__ == '__main__':
+    main('username', 'to_user', 'message_text')
