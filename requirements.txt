@@ -1,8 +1,0 @@
-Install next modules for send message of skype
-
-1. pip install SkPy (on Windows) or pip3 install SkPy (on Linux)
-2. pip3 install keyring
-3. pip3 install argparse
-
-For check work of skype_send_message need to run test_skype_send_message
-
