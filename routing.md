@@ -1,5 +1,5 @@
 ```
-# Routing for IMs
+# Routing for IMs #
 
 1. channel -  ims / skype / telegram / facebook / viber
 2. messages - текст сообщения пользователя
@@ -10,6 +10,7 @@ IMs/skype
 ims/skype/<user_id>/new POST
 
 ims/skype/<user_id>/messages GET
+
 
 IMs/telegram
 
