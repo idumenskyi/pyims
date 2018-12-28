@@ -1,3 +1,4 @@
+```
 #Routing for IMs
 1. channel -  ims / skype / telegram / facebook / viber
 2. messages - текст сообщения пользователя
@@ -28,3 +29,4 @@ IMs/viber
 ims/viber/<user_id>/new POST
 
 ims/viber/<user_id>/messages GET
+```
