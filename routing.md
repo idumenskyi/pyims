@@ -31,4 +31,5 @@ IMs/viber
 ims/viber/<user_id>/new POST
 
 ims/viber/<user_id>/messages GET
+
 ```
