@@ -1,6 +1,6 @@
-```
-# Routing for IMs #
 
+# Routing for IMs #
+```
 1. channel -  ims / skype / telegram / facebook / viber
 2. messages - текст сообщения пользователя
 3. user_id - идентификатор чата, пользователя
