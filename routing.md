@@ -31,5 +31,4 @@ index/login/IMs/viber
 index/login/IMs/viber/<user_id>/new POST
 
 index/login/IMs/viber/<user_id>/messages GET
-
 ```
