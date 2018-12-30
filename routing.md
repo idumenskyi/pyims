@@ -1,35 +1,35 @@
 
 # Routing for IMs #
 ```
-1. channel -  ims / skype / telegram / facebook / viber
+1. channel -  index / login / IMs / skype / telegram / facebook / viber
 2. messages - текст сообщения пользователя
 3. user_id - идентификатор чата, пользователя
 
-IMs/skype
+index/login/IMs/skype
 
-ims/skype/<user_id>/new POST
+index/login/IMs/skype/<user_id>/new POST
 
-ims/skype/<user_id>/messages GET
-
-
-IMs/telegram
-
-ims/telegram/<user_id>/new POST
-
-ims/telegram/<user_id>/messages GET
+index/login/IMs/skype/<user_id>/messages GET
 
 
-IMs/facebook
+index/login/IMs/telegram
 
-ims/facebook/<user_id>/new POST
+index/login/IMs/telegram/<user_id>/new POST
 
-ims/facebook/<user_id>/messages GET
+index/login/IMs/telegram/<user_id>/messages GET
 
 
-IMs/viber
+index/login/IMs/facebook
 
-ims/viber/<user_id>/new POST
+index/login/IMs/facebook/<user_id>/new POST
 
-ims/viber/<user_id>/messages GET
+index/login/IMs/facebook/<user_id>/messages GET
+
+
+index/login/IMs/viber
+
+index/login/IMs/viber/<user_id>/new POST
+
+index/login/IMs/viber/<user_id>/messages GET
 
 ```
